@@ -1,0 +1,77 @@
+server:
+  port: 8990
+
+spring:
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/userdb?useUnicode=true&characterEncoding=utf-8&serverTimezone=UTC
+    username: root
+    password: 980422dy.
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+
+    # formatSQL得这样写
+    properties:
+      hibernate:
+        format_sql: true
+
+  thymeleaf:
+    prefix: classpath:/templates/
+    cache: false
+
+
+  redis:
+    database: 0
+    host: 127.0.0.1
+    port: 6379
+    password:
+    jedis:
+      pool:
+        max-active: 8
+        max-wait: -1ms
+        max-idle: 8
+        min-idle: 0
+    timeout: 2000ms
+
+  kafka:
+    # 指定kafka 代理地址，可以多个
+    bootstrap-servers: 127.0.0.1:9092
+    producer:
+      retries: 0
+      # 每次批量发送消息的数量
+      batch-size: 16384
+      # 缓存容量
+      buffer-memory: 33554432
+      # 指定消息key和消息体的编解码方式
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.apache.kafka.common.serialization.StringSerializer
+    consumer:
+      # 指定默认消费者group id
+      group-id: consumer-tutorial
+      auto-commit-interval:
+      auto-offset-reset: earliest
+      enable-auto-commit: true
+      # 指定消息key和消息体的编解码方式
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+    # 指定listener 容器中的线程数，用于提高并发量
+    listener:
+      concurrency: 3
+
+
+#自定义配置在Oauth2Configuration中认证服务器中使用
+authentication:
+  oauth:
+    clientid: lhm
+    secret: 123
+    tokenValiditySeconds: 1800
+
+#这个配置的意思时，将我们的资源拦截的过滤器运行顺序放到第3个执行，也就是在oauth2的认证服务器后面执行
+security:
+  oauth2:
+    resource:
+      filter-order: 3

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+    <title>添加</title>
+    <!-- Bootstrap CSS-->
+    <link rel="stylesheet" href="#" th:href="@{/webjars/bootstrap/4.3.1/css/bootstrap.css}">
+</head>
+<body>
+<div>
+    <form class="form-horizontal col-5" role="form" th:action="@{/user}" method="post">
+        <div class="form-group">
+            <label for="username" class="col-sm-2 control-label">名字</label>
+            <div class="col-sm-10">
+                <input type="text" name="username" class="form-control" id="username" placeholder="请输入名字">
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="password" class="col-sm-2 control-label">密码</label>
+            <div class="col-sm-10">
+                <input type="text" name="password" class="form-control" id="password" placeholder="请输入密码">
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="age" class="col-sm-2 control-label">年龄</label>
+            <div class="col-sm-10">
+                <input type="text" name="age" class="form-control" id="age" placeholder="年龄 ">
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="gym" class="col-sm-2 control-label">训练馆</label>
+            <div class="col-sm-10">
+                <input type="text" name="gym" class="form-control" id="gym" placeholder="训练馆">
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-sm-offset-2 col-sm-10">
+                <button type="submit" class="btn btn-primary">添加</button>
+            </div>
+        </div>
+
+    </form>
+</div>
+</body>
+</html>
