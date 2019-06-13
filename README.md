@@ -29,7 +29,7 @@ Kafka消息队列的应用。
 zookeeper-server-start.bat ../../config/zookeeper.properties
 ```
 
-![1560417069279](D:\A-University\3.5\笔记\typora-user-images\1560417069279.png)
+![1560417069279](https://github.com/PegasusLiang/EE_homework_3/blob/master/%E4%BD%9C%E4%B8%9A%E6%88%AA%E5%9B%BE/1560417069279.png)
 
 接着运行Kafka
 
@@ -37,15 +37,15 @@ zookeeper-server-start.bat ../../config/zookeeper.properties
 kafka-server-start.bat ../../config/server.properties
 ```
 
-![1560417117253](D:\A-University\3.5\笔记\typora-user-images\1560417117253.png)
+![1560417117253](https://github.com/PegasusLiang/EE_homework_3/blob/master/%E4%BD%9C%E4%B8%9A%E6%88%AA%E5%9B%BE/1560417117253.png)
 
 1. ### 新增目录结构
 
-![1560415537502](D:\A-University\3.5\笔记\typora-user-images\1560415537502.png)
+![1560415537502](https://github.com/PegasusLiang/EE_homework_3/blob/master/%E4%BD%9C%E4%B8%9A%E6%88%AA%E5%9B%BE/1560415537502.png)
 
 2. ### 生产者
 
-![1560415967396](D:\A-University\3.5\笔记\typora-user-images\1560415967396.png)
+![1560415967396](https://github.com/PegasusLiang/EE_homework_3/blob/master/%E4%BD%9C%E4%B8%9A%E6%88%AA%E5%9B%BE/1560415967396.png)
 
 Publisher发送message消息。
 
@@ -55,7 +55,7 @@ kafkaTemplate.send(TopicConst.PAY_TOPIC,msg); 参数为 String topic + String ms
 
 3. ### 消费者
 
-![1560416089880](D:\A-University\3.5\笔记\typora-user-images\1560416089880.png)
+![1560416089880](https://github.com/PegasusLiang/EE_homework_3/blob/master/%E4%BD%9C%E4%B8%9A%E6%88%AA%E5%9B%BE/1560416089880.png)
 
 消费者进行消费。
 
@@ -65,7 +65,7 @@ kafkaTemplate.send(TopicConst.PAY_TOPIC,msg); 参数为 String topic + String ms
 
 4. ### 定义消息类
 
-![1560416462489](D:\A-University\3.5\笔记\typora-user-images\1560416462489.png)
+![1560416462489](https://github.com/PegasusLiang/EE_homework_3/blob/master/%E4%BD%9C%E4%B8%9A%E6%88%AA%E5%9B%BE/1560416462489.png)
 
 
 
@@ -73,18 +73,18 @@ kafkaTemplate.send(TopicConst.PAY_TOPIC,msg); 参数为 String topic + String ms
 
 5. ### 自定义工具类产生消息
 
-![1560416486858](D:\A-University\3.5\笔记\typora-user-images\1560416486858.png)
+![1560416486858](https://github.com/PegasusLiang/EE_homework_3/blob/master/%E4%BD%9C%E4%B8%9A%E6%88%AA%E5%9B%BE/1560416486858.png)
 
 
 
 6. ### 编写Conrtroller接口进行测试
 
-![1560416508712](D:\A-University\3.5\笔记\typora-user-images\1560416508712.png)
+![1560416508712](https://github.com/PegasusLiang/EE_homework_3/blob/master/%E4%BD%9C%E4%B8%9A%E6%88%AA%E5%9B%BE/1560416508712.png)
 
 写了一个循环，不停地发布消息，前端浏览器每刷新一次页面，发布者发布信息。
 
 之前运行了kafka，现在运行项目
 
-![1560417345941](D:\A-University\3.5\笔记\typora-user-images\1560417345941.png)
+![1560417345941](https://github.com/PegasusLiang/EE_homework_3/blob/master/%E4%BD%9C%E4%B8%9A%E6%88%AA%E5%9B%BE/1560417345941.png)
 
 发布，消费信息记录如图。
