@@ -3,6 +3,7 @@
 ### 学号姓名
 16301070 梁洪铭
 
+
 ### 四次作业
 [第一次作业](https://github.com/PegasusLiang/EE_homework_1_JPA)
 
@@ -15,10 +16,15 @@
 
 第一次作业的基础：
 > 实现了基础的注册登录功能，同时展示t_gym跟t_user两表的数据。
+
 > 实现了两表关联，UserEntity跟Gym是多对一的关系，在Gym类中建立关联。
+
 > 实现Spring Cache，多次查询在第一次查询后不再从数据库中查询。
+
 > 实现了分页，但未在前端页面显示。
+
 > 实现了Auditing，创建时间，更新时间自动生成。> 前端的展示我用了thymeleaf来映射数据。
+
 
 第二次作业基础：
 1. Restful Service , restful api的设计。修改了上次的url设计
