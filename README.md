@@ -1,4 +1,8 @@
 ## SpringBoot JPA Demo
+
+### 学号姓名
+16301070 梁洪铭
+
 ### 四次作业
 [第一次作业](https://github.com/PegasusLiang/EE_homework_1_JPA)
 
