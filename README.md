@@ -1,9 +1,13 @@
 ## SpringBoot JPA Demo
+### 四次作业
 [第一次作业](https://github.com/PegasusLiang/EE_homework_1_JPA)
 
 [第二次作业](https://github.com/PegasusLiang/EE_homework_2)
 
 [第三次作业](https://github.com/PegasusLiang/EE_homework_3)
+
+[第四次作业](https://github.com/PegasusLiang/EE_homework_4)
+
 
 第一次作业的基础：
 > 实现了基础的注册登录功能，同时展示t_gym跟t_user两表的数据。
